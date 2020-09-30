@@ -3,10 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TiendaComponent } from './tienda/tienda.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CarruselComponent } from './carrusel/carrusel.component';
+import { CarritoComponent } from './carrito/carrito.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TiendaComponent,
+    NavbarComponent,
+    CarruselComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
