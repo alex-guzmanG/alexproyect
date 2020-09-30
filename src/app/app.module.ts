@@ -7,6 +7,11 @@ import { TiendaComponent } from './tienda/tienda.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CarruselComponent } from './carrusel/carrusel.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule}from 'angularfire2';//firebase
+import { AngularFireDatabaseModule } from 'angularfire2/database';//firebase
+import { environment} from '../environments/environment';
+import { from } from 'rxjs';
 
 
 @NgModule({
@@ -19,7 +24,11 @@ import { CarritoComponent } from './carrito/carrito.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
